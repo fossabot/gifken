@@ -1,0 +1,54 @@
+{
+    "project": {
+        "name": "gifken",
+        "description": "JavaScript GIF parser and maker",
+        "version": "0.0.1",
+        "url": ""
+    },
+    "files": {
+        "src/gifken.ts": {
+            "name": "src/gifken.ts",
+            "modules": {},
+            "classes": {
+                "Gif": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Gif": {
+            "name": "Gif",
+            "shortname": "Gif",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/gifken.ts",
+            "line": 38,
+            "description": "Gif",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "skipDefault",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ]
+        }
+    },
+    "classitems": [
+        {
+            "file": "src/gifken.ts",
+            "line": 19,
+            "description": "GIF Header block.",
+            "itemtype": "property",
+            "name": "_standard",
+            "type": "{string}",
+            "class": "Gif"
+        }
+    ],
+    "warnings": []
+}
