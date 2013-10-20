@@ -31,10 +31,15 @@
       </header>
       <section>
         <h2>
+<a name="documents" class="anchor" href="#documents"><span class="octicon octicon-link"></span></a>Documents</h2>
+
+<p><a href="docs/">docment</a></p>
+
+<h2>
 <a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
 
 <h3>
-<a name="create-a-gif-image" class="anchor" href="#create-a-gif-image"><span class="octicon octicon-link"></span></a>Create a GIF image</h3>
+<a name="create-a-gif-image-in-browser" class="anchor" href="#create-a-gif-image-in-browser"><span class="octicon octicon-link"></span></a>Create a GIF image in browser</h3>
 
 <div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"content"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://raw.github.com/aaharu/gifken/master/build/gifken.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
@@ -61,16 +66,23 @@
         <span class="nx">newgif</span><span class="p">.</span><span class="nx">frames</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">pixelData</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">%</span> <span class="mi">11</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="kd">var</span> <span class="nx">newimg</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
-    <span class="kd">var</span> <span class="nx">newblob</span> <span class="o">=</span> <span class="nx">newgif</span><span class="p">.</span><span class="nx">writeToBlob</span><span class="p">();</span>
-    <span class="nx">newimg</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">URL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">newblob</span><span class="p">);</span>
+
+    <span class="c1">// createObjectURL pattern</span>
+    <span class="c1">// var blob = newgif.writeToBlob();</span>
+    <span class="c1">// newimg.src = URL.createObjectURL(blob);</span>
+
+    <span class="c1">// data-URL pattern</span>
+    <span class="nx">newimg</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Gif</span><span class="p">.</span><span class="nx">writeToDataUrl</span><span class="p">(</span><span class="nx">newgif</span><span class="p">);</span>
 
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"content"</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">newimg</span><span class="p">);</span>
 <span class="p">};</span>
 <span class="nt">&lt;/script&gt;</span>
 </pre></div>
 
+<p><a href="examples/1.html">See this example</a></p>
+
 <h3>
-<a name="split-an-animated-gif-image" class="anchor" href="#split-an-animated-gif-image"><span class="octicon octicon-link"></span></a>Split an animated GIF image</h3>
+<a name="split-an-animated-gif-image-in-browser" class="anchor" href="#split-an-animated-gif-image-in-browser"><span class="octicon octicon-link"></span></a>Split an animated GIF image in browser</h3>
 
 <div class="highlight highlight-javascript"><pre><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
@@ -90,6 +102,13 @@
     <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
 <span class="p">};</span>
 </pre></div>
+
+<p><a href="examples/2.html">See this example</a></p>
+
+<h3>
+<a name="create-a-gif-image-in-browser-1" class="anchor" href="#create-a-gif-image-in-browser-1"><span class="octicon octicon-link"></span></a>Create a GIF image in browser</h3>
+
+<p>TODO</p>
       </section>
       <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
