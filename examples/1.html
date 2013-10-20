@@ -1,0 +1,36 @@
+<div id="content"></div>
+<script src="https://raw.github.com/aaharu/gifken/master/build/gifken.min.js"></script>
+<script type="text/javascript">
+window.onload = function () {
+    var newgif = new gifken.Gif();
+    newgif.width = 100;
+    newgif.height = 100;
+    newgif.globalColorTable = gifken.Color.createColorTable([
+        new gifken.Color(0, 0, 0),
+        new gifken.Color(255, 0, 0),
+        new gifken.Color(0, 255, 0),
+        new gifken.Color(0, 0, 255),
+        new gifken.Color(100, 100, 255),
+        new gifken.Color(100, 255, 100),
+        new gifken.Color(255, 100, 100),
+        new gifken.Color(0, 255, 255),
+        new gifken.Color(255, 0, 255),
+        new gifken.Color(255, 255, 0),
+        new gifken.Color(255, 255, 255)
+    ]);
+    newgif.frames = [gifken.Frame.init(newgif)];
+    for (var i = 0; i < newgif.frames[0].pixelData.length; ++i) {
+        newgif.frames[0].pixelData[i] = i % 11;
+    }
+    var newimg = new Image();
+
+    // createObjectURL pattern
+    // var blob = newgif.writeToBlob();
+    // newimg.src = URL.createObjectURL(blob);
+
+    // data-URL pattern
+    newimg.src = gifken.Gif.writeToDataUrl(newgif);
+
+    document.getElementById("content").appendChild(newimg);
+};
+</script>

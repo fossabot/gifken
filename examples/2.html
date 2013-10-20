@@ -1,0 +1,25 @@
+<h2>original image</h2>
+<img src="http://allow-any-origin.appspot.com/http://mogashi.no-ip.org/alice/?ep=4&no=17">
+
+<h2>splited images</h2>
+<div id="content"></div>
+<script src="https://raw.github.com/aaharu/gifken/master/build/gifken.min.js"></script>
+<script type="text/javascript">
+window.onload = function () {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://allow-any-origin.appspot.com/http://mogashi.no-ip.org/alice/?ep=4&no=17", true);
+    xhr.responseType = "arraybuffer";
+    xhr.onload = function (e) {
+        var arrayBuffer = e.target["response"];
+        var gif = gifken.Gif.parse(arrayBuffer);
+
+        gif.split(true).forEach(function (i) {
+            var img = new Image();
+            var blob = gifken.Gif.writeToBlob(i);
+            img.src = URL.createObjectURL(blob);
+            document.getElementById("content").appendChild(img);
+        });
+    };
+    xhr.send();
+};
+</script>
