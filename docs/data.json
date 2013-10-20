@@ -10,7 +10,9 @@
             "name": "src/gifken.ts",
             "modules": {},
             "classes": {
-                "Gif": 1
+                "Gif": 1,
+                "Frame": 1,
+                "Color": 1
             },
             "fors": {},
             "namespaces": {}
@@ -27,14 +29,65 @@
             "plugin_for": [],
             "extension_for": [],
             "file": "src/gifken.ts",
-            "line": 38,
+            "line": 80,
             "description": "Gif",
             "is_constructor": 1,
             "params": [
                 {
-                    "name": "skipDefault",
+                    "name": "options",
+                    "description": "skipDefault",
+                    "type": "Boolean",
+                    "optional": true
+                }
+            ]
+        },
+        "Frame": {
+            "name": "Frame",
+            "shortname": "Frame",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/gifken.ts",
+            "line": 503,
+            "description": "Frame",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "gif",
                     "description": "",
-                    "type": "Boolean"
+                    "type": "Gif"
+                }
+            ]
+        },
+        "Color": {
+            "name": "Color",
+            "shortname": "Color",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/gifken.ts",
+            "line": 534,
+            "description": "Color",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "r",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "g",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "b",
+                    "description": "",
+                    "type": "Number"
                 }
             ]
         }
@@ -44,9 +97,210 @@
             "file": "src/gifken.ts",
             "line": 19,
             "description": "GIF Header block.",
+            "access": "private",
+            "tagname": "",
             "itemtype": "property",
-            "name": "_standard",
-            "type": "{string}",
+            "name": "_version",
+            "type": "{Version}",
+            "class": "Gif"
+        },
+        {
+            "file": "src/gifken.ts",
+            "line": 28,
+            "description": "GIF image width.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_width",
+            "type": "{number}",
+            "class": "Gif"
+        },
+        {
+            "file": "src/gifken.ts",
+            "line": 37,
+            "description": "GIF image height.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_height",
+            "type": "{number}",
+            "class": "Gif"
+        },
+        {
+            "file": "src/gifken.ts",
+            "line": 46,
+            "description": "The number of color in the Global Color Table.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_globalTableSize",
+            "type": "{number}",
+            "class": "Gif"
+        },
+        {
+            "file": "src/gifken.ts",
+            "line": 59,
+            "description": "The Global Color Table array.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_globalColorTable",
+            "type": "{Uint8Array}",
+            "class": "Gif"
+        },
+        {
+            "file": "src/gifken.ts",
+            "line": 70,
+            "description": "The number of animation iteration count.\nif this is 0, it is infinite.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_loopCount",
+            "type": "{number}",
+            "class": "Gif"
+        },
+        {
+            "file": "src/gifken.ts",
+            "line": 103,
+            "description": "Parse Gif image from ArrayBuffer.",
+            "static": 1,
+            "itemtype": "method",
+            "name": "parse",
+            "params": [
+                {
+                    "name": "buffer",
+                    "description": "",
+                    "type": "ArrayBuffer"
+                }
+            ],
+            "return": {
+                "description": "parsed gif object",
+                "type": "Gif"
+            },
+            "class": "Gif"
+        },
+        {
+            "file": "src/gifken.ts",
+            "line": 188,
+            "description": "Convert Gif to Uint8Array[].",
+            "access": "private",
+            "tagname": "",
+            "static": 1,
+            "itemtype": "method",
+            "name": "_writeToArrayBuffer",
+            "params": [
+                {
+                    "name": "gif",
+                    "description": "",
+                    "type": "Gif"
+                }
+            ],
+            "return": {
+                "description": "array of Uint8Array",
+                "type": "Uint8Array[]"
+            },
+            "class": "Gif"
+        },
+        {
+            "file": "src/gifken.ts",
+            "line": 326,
+            "description": "Return Blob object.",
+            "itemtype": "method",
+            "name": "writeToBlob",
+            "return": {
+                "description": "BLOB",
+                "type": "Blob"
+            },
+            "class": "Gif"
+        },
+        {
+            "file": "src/gifken.ts",
+            "line": 336,
+            "description": "Convert Gif to Blob.",
+            "static": 1,
+            "itemtype": "method",
+            "name": "writeToBlob",
+            "params": [
+                {
+                    "name": "gif",
+                    "description": "",
+                    "type": "Gif"
+                }
+            ],
+            "return": {
+                "description": "BLOB",
+                "type": "Blob"
+            },
+            "class": "Gif"
+        },
+        {
+            "file": "src/gifken.ts",
+            "line": 348,
+            "description": "Return Data-URL string.",
+            "itemtype": "method",
+            "name": "writeToDataUrl",
+            "return": {
+                "description": "Data-URL string",
+                "type": "String"
+            },
+            "class": "Gif"
+        },
+        {
+            "file": "src/gifken.ts",
+            "line": 358,
+            "description": "Convert Gif to Data-URL string.",
+            "static": 1,
+            "itemtype": "method",
+            "name": "writeToDataUrl",
+            "params": [
+                {
+                    "name": "gif",
+                    "description": "",
+                    "type": "Gif"
+                }
+            ],
+            "return": {
+                "description": "Data-URL string",
+                "type": "String"
+            },
+            "class": "Gif"
+        },
+        {
+            "file": "src/gifken.ts",
+            "line": 380,
+            "description": "Split the animated GIF image.",
+            "itemtype": "method",
+            "name": "split",
+            "params": [
+                {
+                    "name": "orverwrite",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "array of Gif object",
+                "type": "Gif[]"
+            },
+            "class": "Gif"
+        },
+        {
+            "file": "src/gifken.ts",
+            "line": 441,
+            "description": "Playback the animated GIF image.",
+            "itemtype": "method",
+            "name": "playback",
+            "params": [
+                {
+                    "name": "orverwrite",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "Gif object",
+                "type": "Gif"
+            },
             "class": "Gif"
         }
     ],
