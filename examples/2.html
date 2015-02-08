@@ -15,7 +15,7 @@ window.onload = function () {
         if (typeof Worker === "undefined" || typeof URL === "undefined") {
             var gif = gifken.Gif.parse(arrayBuffer);
             while (content.firstChild) {
-                element.removeChild(element.firstChild);
+                content.removeChild(content.firstChild);
             }
             gif.split(true).forEach(function (i) {
                 var img = new Image();
@@ -27,7 +27,7 @@ window.onload = function () {
             var worker = new Worker("/gifken/javascripts/task.js");
             worker.onmessage = function (we) {
                 while (content.firstChild) {
-                    element.removeChild(element.firstChild);
+                    content.removeChild(content.firstChild);
                 }
                 we.data.srcs.forEach(function (i) {
                     var img = new Image();
