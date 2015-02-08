@@ -25,11 +25,11 @@ window.onload = function () {
     var newimg = new Image();
 
     // createObjectURL pattern
-    // var blob = newgif.writeToBlob();
+    // var blob = gifken.GifPresenter.writeToBlob(newgif.writeToArrayBuffer());
     // newimg.src = URL.createObjectURL(blob);
 
     // data-URL pattern
-    newimg.src = gifken.Gif.writeToDataUrl(newgif);
+    newimg.src = gifken.GifPresenter.writeToDataUrl(newgif.writeToArrayBuffer());
 
     document.getElementById("content").appendChild(newimg);
 };

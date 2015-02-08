@@ -2,23 +2,41 @@
 <img src="https://38.media.tumblr.com/0a81460ccc3c61e5bf135deb7f636db7/tumblr_n5i8whiJbl1spy7ono1_500.gif">
 
 <h2>splited images</h2>
-<div id="content"></div>
+<div id="content"><img src="/gifken/images/loading-50-3.gif"/></div>
 <script src="/gifken/javascripts/gifken-client.min.js"></script>
 <script type="text/javascript">
 window.onload = function () {
+    var content = document.getElementById("content");
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://38.media.tumblr.com/0a81460ccc3c61e5bf135deb7f636db7/tumblr_n5i8whiJbl1spy7ono1_500.gif", true);
     xhr.responseType = "arraybuffer";
     xhr.onload = function (e) {
         var arrayBuffer = e.target["response"];
-        var gif = gifken.Gif.parse(arrayBuffer);
-
-        gif.split(true).forEach(function (i) {
-            var img = new Image();
-            var blob = gifken.GifPresenter.writeToBlob(i.writeToArrayBuffer());
-            img.src = URL.createObjectURL(blob);
-            document.getElementById("content").appendChild(img);
-        });
+        if (typeof Worker === "undefined") {
+            var gif = gifken.Gif.parse(arrayBuffer);
+            while (content.firstChild) {
+                element.removeChild(element.firstChild);
+            }
+            gif.split(true).forEach(function (i) {
+                var img = new Image();
+                var blob = gifken.GifPresenter.writeToBlob(i.writeToArrayBuffer());
+                img.src = URL.createObjectURL(blob);
+                content.appendChild(img);
+            });
+        } else {
+            var worker = new Worker("/gifken/javascripts/task.js");
+            worker.onmessage = function (we) {
+                while (content.firstChild) {
+                    element.removeChild(element.firstChild);
+                }
+                we.data.srcs.forEach(function (i) {
+                    var img = new Image();
+                    img.src = i;
+                    content.appendChild(img);
+                });
+            };
+            worker.postMessage({buffer: arrayBuffer});
+        }
     };
     xhr.send();
 };
