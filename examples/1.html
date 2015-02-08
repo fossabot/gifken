@@ -1,5 +1,5 @@
 <div id="content"></div>
-<script src="/gifken/javascripts/gifken.min.js"></script>
+<script src="/gifken/javascripts/gifken-client.min.js"></script>
 <script type="text/javascript">
 window.onload = function () {
     var newgif = new gifken.Gif();
@@ -18,7 +18,7 @@ window.onload = function () {
         new gifken.Color(255, 255, 0),
         new gifken.Color(255, 255, 255)
     ]);
-    newgif.frames = [gifken.Frame.init(newgif)];
+    newgif.frames = [gifken.Frame.init(newgif.width, newgif.height)];
     for (var i = 0; i < newgif.frames[0].pixelData.length; ++i) {
         newgif.frames[0].pixelData[i] = i % 11;
     }

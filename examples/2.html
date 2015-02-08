@@ -1,13 +1,13 @@
 <h2>original image</h2>
-<img src="http://allow-any-origin.appspot.com/http://mogashi.no-ip.org/alice/?ep=4&no=17">
+<img src="https://38.media.tumblr.com/0a81460ccc3c61e5bf135deb7f636db7/tumblr_n5i8whiJbl1spy7ono1_500.gif">
 
 <h2>splited images</h2>
 <div id="content"></div>
-<script src="/gifken/javascripts/gifken.min.js"></script>
+<script src="/gifken/javascripts/gifken-client.min.js"></script>
 <script type="text/javascript">
 window.onload = function () {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://allow-any-origin.appspot.com/http://mogashi.no-ip.org/alice/?ep=4&no=17", true);
+    xhr.open("GET", "https://38.media.tumblr.com/0a81460ccc3c61e5bf135deb7f636db7/tumblr_n5i8whiJbl1spy7ono1_500.gif", true);
     xhr.responseType = "arraybuffer";
     xhr.onload = function (e) {
         var arrayBuffer = e.target["response"];
@@ -15,7 +15,7 @@ window.onload = function () {
 
         gif.split(true).forEach(function (i) {
             var img = new Image();
-            var blob = gifken.Gif.writeToBlob(i);
+            var blob = gifken.GifPresenter.writeToBlob(i.writeToArrayBuffer());
             img.src = URL.createObjectURL(blob);
             document.getElementById("content").appendChild(img);
         });
