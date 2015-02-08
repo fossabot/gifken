@@ -31,87 +31,115 @@
       </header>
       <section>
         <h2>
-<a name="documents" class="anchor" href="#documents"><span class="octicon octicon-link"></span></a>Documents</h2>
+<a id="documents" class="anchor" href="#documents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documents</h2>
 
 <p><a href="docs/">docment</a></p>
 
 <h2>
-<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h2>
 
 <h3>
-<a name="create-a-gif-image-in-browser" class="anchor" href="#create-a-gif-image-in-browser"><span class="octicon octicon-link"></span></a>Create a GIF image in browser</h3>
+<a id="create-a-gif-image-in-browser" class="anchor" href="#create-a-gif-image-in-browser" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a GIF image in browser</h3>
 
 <p><a href="examples/1.html">See this example</a></p>
 
-<div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"content"</span><span class="nt">&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/gifken/javascripts/gifken.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">newgif</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Gif</span><span class="p">();</span>
-    <span class="nx">newgif</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
-    <span class="nx">newgif</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
-    <span class="nx">newgif</span><span class="p">.</span><span class="nx">globalColorTable</span> <span class="o">=</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Color</span><span class="p">.</span><span class="nx">createColorTable</span><span class="p">([</span>
-        <span class="k">new</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-        <span class="k">new</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-        <span class="k">new</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-        <span class="k">new</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span>
-        <span class="k">new</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Color</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span>
-        <span class="k">new</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Color</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
-        <span class="k">new</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
-        <span class="k">new</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span>
-        <span class="k">new</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span>
-        <span class="k">new</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-        <span class="k">new</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
-    <span class="p">]);</span>
-    <span class="nx">newgif</span><span class="p">.</span><span class="nx">frames</span> <span class="o">=</span> <span class="p">[</span><span class="nx">gifken</span><span class="p">.</span><span class="nx">Frame</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">newgif</span><span class="p">)];</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">newgif</span><span class="p">.</span><span class="nx">frames</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">pixelData</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">newgif</span><span class="p">.</span><span class="nx">frames</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">pixelData</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">%</span> <span class="mi">11</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="kd">var</span> <span class="nx">newimg</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
-
-    <span class="c1">// createObjectURL pattern</span>
-    <span class="c1">// var blob = newgif.writeToBlob();</span>
-    <span class="c1">// newimg.src = URL.createObjectURL(blob);</span>
-
-    <span class="c1">// data-URL pattern</span>
-    <span class="nx">newimg</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Gif</span><span class="p">.</span><span class="nx">writeToDataUrl</span><span class="p">(</span><span class="nx">newgif</span><span class="p">);</span>
-
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"content"</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">newimg</span><span class="p">);</span>
-<span class="p">};</span>
-<span class="nt">&lt;/script&gt;</span>
-</pre></div>
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>content<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/gifken/javascripts/gifken-client.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+<span class="pl-s2">&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;</span>
+<span class="pl-s2"><span class="pl-s3">window</span>.<span class="pl-en">onload</span> <span class="pl-k">=</span> <span class="pl-st">function</span> () {</span>
+<span class="pl-s2">    <span class="pl-s">var</span> newgif <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">gifken.Gif</span>();</span>
+<span class="pl-s2">    newgif.<span class="pl-sc">width</span> <span class="pl-k">=</span> <span class="pl-c1">100</span>;</span>
+<span class="pl-s2">    newgif.<span class="pl-sc">height</span> <span class="pl-k">=</span> <span class="pl-c1">100</span>;</span>
+<span class="pl-s2">    newgif.globalColorTable <span class="pl-k">=</span> gifken.Color.createColorTable([</span>
+<span class="pl-s2">        <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>),</span>
+<span class="pl-s2">        <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">255</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>),</span>
+<span class="pl-s2">        <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">0</span>, <span class="pl-c1">255</span>, <span class="pl-c1">0</span>),</span>
+<span class="pl-s2">        <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">255</span>),</span>
+<span class="pl-s2">        <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">100</span>, <span class="pl-c1">100</span>, <span class="pl-c1">255</span>),</span>
+<span class="pl-s2">        <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">100</span>, <span class="pl-c1">255</span>, <span class="pl-c1">100</span>),</span>
+<span class="pl-s2">        <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">255</span>, <span class="pl-c1">100</span>, <span class="pl-c1">100</span>),</span>
+<span class="pl-s2">        <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">0</span>, <span class="pl-c1">255</span>, <span class="pl-c1">255</span>),</span>
+<span class="pl-s2">        <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">255</span>, <span class="pl-c1">0</span>, <span class="pl-c1">255</span>),</span>
+<span class="pl-s2">        <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">255</span>, <span class="pl-c1">255</span>, <span class="pl-c1">0</span>),</span>
+<span class="pl-s2">        <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">255</span>, <span class="pl-c1">255</span>, <span class="pl-c1">255</span>)</span>
+<span class="pl-s2">    ]);</span>
+<span class="pl-s2">    newgif.<span class="pl-sc">frames</span> <span class="pl-k">=</span> [gifken.<span class="pl-s3">Frame</span>.init(newgif.<span class="pl-sc">width</span>, newgif.<span class="pl-sc">height</span>)];</span>
+<span class="pl-s2">    <span class="pl-k">for</span> (<span class="pl-s">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> newgif.<span class="pl-sc">frames</span>[<span class="pl-c1">0</span>].pixelData.<span class="pl-sc">length</span>; <span class="pl-k">++</span>i) {</span>
+<span class="pl-s2">        newgif.<span class="pl-sc">frames</span>[<span class="pl-c1">0</span>].pixelData[i] <span class="pl-k">=</span> i <span class="pl-k">%</span> <span class="pl-c1">11</span>;</span>
+<span class="pl-s2">    }</span>
+<span class="pl-s2">    <span class="pl-s">var</span> newimg <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Image</span>();</span>
+<span class="pl-s2"></span>
+<span class="pl-s2">    <span class="pl-c">// createObjectURL pattern</span></span>
+<span class="pl-s2">    <span class="pl-c">// var blob = gifken.GifPresenter.writeToBlob(newgif.writeToArrayBuffer());</span></span>
+<span class="pl-s2">    <span class="pl-c">// newimg.src = URL.createObjectURL(blob);</span></span>
+<span class="pl-s2"></span>
+<span class="pl-s2">    <span class="pl-c">// data-URL pattern</span></span>
+<span class="pl-s2">    newimg.<span class="pl-sc">src</span> <span class="pl-k">=</span> gifken.GifPresenter.writeToDataUrl(newgif.writeToArrayBuffer());</span>
+<span class="pl-s2"></span>
+<span class="pl-s2">    <span class="pl-s3">document</span>.<span class="pl-s3">getElementById</span>(<span class="pl-s1"><span class="pl-pds">"</span>content<span class="pl-pds">"</span></span>).<span class="pl-s3">appendChild</span>(newimg);</span>
+<span class="pl-s2">};</span>
+<span class="pl-s2">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <h3>
-<a name="split-an-animated-gif-image-in-browser" class="anchor" href="#split-an-animated-gif-image-in-browser"><span class="octicon octicon-link"></span></a>Split an animated GIF image in browser</h3>
+<a id="split-an-animated-gif-image-in-browser" class="anchor" href="#split-an-animated-gif-image-in-browser" aria-hidden="true"><span class="octicon octicon-link"></span></a>Split an animated GIF image in browser</h3>
 
 <p><a href="examples/2.html">See this example</a></p>
 
-<div class="highlight highlight-javascript"><pre><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-    <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="nx">GIF_IMAGE_URL</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
-    <span class="nx">xhr</span><span class="p">.</span><span class="nx">responseType</span> <span class="o">=</span> <span class="s2">"arraybuffer"</span><span class="p">;</span>
-    <span class="nx">xhr</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">arrayBuffer</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">[</span><span class="s2">"response"</span><span class="p">];</span>
-        <span class="kd">var</span> <span class="nx">gif</span> <span class="o">=</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Gif</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">arrayBuffer</span><span class="p">);</span>
+<div class="highlight highlight-javascript"><pre><span class="pl-c">// </span>
+<span class="pl-s3">window</span>.<span class="pl-en">onload</span> <span class="pl-k">=</span> <span class="pl-st">function</span> () {
+    <span class="pl-s">var</span> xhr <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">XMLHttpRequest</span>();
+    xhr.<span class="pl-s3">open</span>(<span class="pl-s1"><span class="pl-pds">"</span>GET<span class="pl-pds">"</span></span>, GIF_IMAGE_URL, <span class="pl-c1">true</span>);
+    xhr.responseType <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">"</span>arraybuffer<span class="pl-pds">"</span></span>;
+    <span class="pl-s3">xhr</span>.<span class="pl-en">onload</span> <span class="pl-k">=</span> <span class="pl-st">function</span> (<span class="pl-vpf">e</span>) {
+        <span class="pl-s">var</span> arrayBuffer <span class="pl-k">=</span> e.<span class="pl-sc">target</span>[<span class="pl-s1"><span class="pl-pds">"</span>response<span class="pl-pds">"</span></span>];
+        <span class="pl-s">var</span> gif <span class="pl-k">=</span> gifken.Gif.<span class="pl-s3">parse</span>(arrayBuffer);
 
-        <span class="nx">gif</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="kc">true</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kd">var</span> <span class="nx">img</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
-            <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="nx">gifken</span><span class="p">.</span><span class="nx">Gif</span><span class="p">.</span><span class="nx">writeToBlob</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
-            <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">URL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
-            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"content"</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">img</span><span class="p">);</span>
-        <span class="p">});</span>
-    <span class="p">};</span>
-    <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
-<span class="p">};</span>
-</pre></div>
+        gif.<span class="pl-s3">split</span>(<span class="pl-c1">true</span>).forEach(<span class="pl-st">function</span> (<span class="pl-vpf">i</span>) {
+            <span class="pl-s">var</span> img <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Image</span>();
+            <span class="pl-s">var</span> blob <span class="pl-k">=</span> gifken.Gif.writeToBlob(i.writeToArrayBuffer());
+            img.<span class="pl-sc">src</span> <span class="pl-k">=</span> URL.createObjectURL(blob);
+            <span class="pl-s3">document</span>.<span class="pl-s3">getElementById</span>(<span class="pl-s1"><span class="pl-pds">"</span>content<span class="pl-pds">"</span></span>).<span class="pl-s3">appendChild</span>(img);
+        });
+    };
+    xhr.<span class="pl-s3">send</span>();
+};</pre></div>
 
 <h3>
-<a name="create-a-gif-image-in-browser-1" class="anchor" href="#create-a-gif-image-in-browser-1"><span class="octicon octicon-link"></span></a>Create a GIF image in browser</h3>
+<a id="create-a-gif-image-by-nodejs" class="anchor" href="#create-a-gif-image-by-nodejs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a GIF image by Node.js</h3>
 
-<p>TODO</p>
+<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> fs <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">"</span>fs<span class="pl-pds">"</span></span>),
+    path <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">"</span>path<span class="pl-pds">"</span></span>),
+    gifken <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">"</span>../../build/gifken.js<span class="pl-pds">"</span></span>);
+
+<span class="pl-s">var</span> newgif <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">gifken.Gif</span>();
+newgif.<span class="pl-sc">width</span> <span class="pl-k">=</span> <span class="pl-c1">100</span>;
+newgif.<span class="pl-sc">height</span> <span class="pl-k">=</span> <span class="pl-c1">100</span>;
+newgif.globalColorTable <span class="pl-k">=</span> gifken.Color.createColorTable([
+    <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>),
+    <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">255</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>),
+    <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">0</span>, <span class="pl-c1">255</span>, <span class="pl-c1">0</span>),
+    <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">255</span>),
+    <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">100</span>, <span class="pl-c1">100</span>, <span class="pl-c1">255</span>),
+    <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">100</span>, <span class="pl-c1">255</span>, <span class="pl-c1">100</span>),
+    <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">255</span>, <span class="pl-c1">100</span>, <span class="pl-c1">100</span>),
+    <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">0</span>, <span class="pl-c1">255</span>, <span class="pl-c1">255</span>),
+    <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">255</span>, <span class="pl-c1">0</span>, <span class="pl-c1">255</span>),
+    <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">255</span>, <span class="pl-c1">255</span>, <span class="pl-c1">0</span>),
+    <span class="pl-k">new</span> <span class="pl-en">gifken.Color</span>(<span class="pl-c1">255</span>, <span class="pl-c1">255</span>, <span class="pl-c1">255</span>)
+]);
+newgif.<span class="pl-sc">frames</span> <span class="pl-k">=</span> [gifken.<span class="pl-s3">Frame</span>.init(newgif.<span class="pl-sc">width</span>, newgif.<span class="pl-sc">height</span>)];
+<span class="pl-k">for</span> (<span class="pl-s">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> newgif.<span class="pl-sc">frames</span>[<span class="pl-c1">0</span>].pixelData.<span class="pl-sc">length</span>; <span class="pl-k">++</span>i) {
+    newgif.<span class="pl-sc">frames</span>[<span class="pl-c1">0</span>].pixelData[i] <span class="pl-k">=</span> i <span class="pl-k">%</span> <span class="pl-c1">11</span>;
+}
+<span class="pl-s">var</span> buffer <span class="pl-k">=</span> newgif.writeToArray();
+
+fs.writeFile(path.resolve(<span class="pl-sv">__dirname</span>, <span class="pl-s1"><span class="pl-pds">"</span>sample.gif<span class="pl-pds">"</span></span>), <span class="pl-k">new</span> <span class="pl-en">Buffer</span>(buffer), <span class="pl-st">function</span> (<span class="pl-vpf">err</span>) {
+    <span class="pl-k">if</span> (err) <span class="pl-k">throw</span> err;
+    <span class="pl-en">console</span><span class="pl-s3">.log</span>(<span class="pl-s1"><span class="pl-pds">"</span>It's saved!<span class="pl-pds">"</span></span>);
+});</pre></div>
       </section>
       <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
