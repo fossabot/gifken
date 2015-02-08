@@ -1,36 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>gifken by aaharu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <title>gifken by aaharu</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">gifken</h1>
-        <p class="header">TypeScript / JavaScript GIF parser and maker</p>
+    <header>
+      <div class="inner">
+        <h1>gifken</h1>
+        <h2>TypeScript / JavaScript GIF parser and maker</h2>
+        <a href="https://github.com/aaharu/gifken" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/aaharu/gifken/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/aaharu/gifken/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/aaharu/gifken">View On GitHub</a></li>
-        </ul>
-
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/aaharu">aaharu</a></p>
-
-
-      </header>
-      <section>
-        <h2>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2>
 <a id="documents" class="anchor" href="#documents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documents</h2>
 
 <p><a href="docs/">docment</a></p>
@@ -39,9 +37,8 @@
 <a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h2>
 
 <h3>
-<a id="create-a-gif-image-in-browser" class="anchor" href="#create-a-gif-image-in-browser" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a GIF image in browser</h3>
-
-<p><a href="examples/1.html">See this example</a></p>
+<a id="create-a-gif-image-in-browser" class="anchor" href="#create-a-gif-image-in-browser" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="examples/1.html">Create a GIF image in browser</a>
+</h3>
 
 <div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>content<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
 &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/gifken/javascripts/gifken-client.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
@@ -81,12 +78,10 @@
 <span class="pl-s2">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <h3>
-<a id="split-an-animated-gif-image-in-browser" class="anchor" href="#split-an-animated-gif-image-in-browser" aria-hidden="true"><span class="octicon octicon-link"></span></a>Split an animated GIF image in browser</h3>
+<a id="split-an-animated-gif-image-in-browser" class="anchor" href="#split-an-animated-gif-image-in-browser" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="examples/2.html">Split an animated GIF image in browser</a>
+</h3>
 
-<p><a href="examples/2.html">See this example</a></p>
-
-<div class="highlight highlight-javascript"><pre><span class="pl-c">// </span>
-<span class="pl-s3">window</span>.<span class="pl-en">onload</span> <span class="pl-k">=</span> <span class="pl-st">function</span> () {
+<div class="highlight highlight-javascript"><pre><span class="pl-s3">window</span>.<span class="pl-en">onload</span> <span class="pl-k">=</span> <span class="pl-st">function</span> () {
     <span class="pl-s">var</span> xhr <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">XMLHttpRequest</span>();
     xhr.<span class="pl-s3">open</span>(<span class="pl-s1"><span class="pl-pds">"</span>GET<span class="pl-pds">"</span></span>, GIF_IMAGE_URL, <span class="pl-c1">true</span>);
     xhr.responseType <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">"</span>arraybuffer<span class="pl-pds">"</span></span>;
@@ -137,12 +132,25 @@ fs.writeFile(path.resolve(<span class="pl-sv">__dirname</span>, <span class="pl-
     <span class="pl-k">if</span> (err) <span class="pl-k">throw</span> err;
     <span class="pl-en">console</span><span class="pl-s3">.log</span>(<span class="pl-s1"><span class="pl-pds">"</span>It's saved!<span class="pl-pds">"</span></span>);
 });</pre></div>
-      </section>
-      <footer>
-        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/aaharu/gifken/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/aaharu/gifken/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/aaharu/gifken"></a> is maintained by <a href="https://github.com/aaharu">aaharu</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
+
+  
   </body>
 </html>
