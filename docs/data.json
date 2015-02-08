@@ -1,11 +1,18 @@
 {
     "project": {
         "name": "gifken",
-        "description": "JavaScript GIF parser and maker",
-        "version": "0.0.1",
-        "url": ""
+        "description": "TypeScript / JavaScript GIF parser and maker",
+        "version": "0.0.2-alpha",
+        "url": "http://aaharu.github.io/gifken/"
     },
     "files": {
+        "src/GifPresenter.ts": {
+            "name": "src/GifPresenter.ts",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
         "src/gifken.ts": {
             "name": "src/gifken.ts",
             "modules": {},
@@ -29,7 +36,7 @@
             "plugin_for": [],
             "extension_for": [],
             "file": "src/gifken.ts",
-            "line": 82,
+            "line": 83,
             "description": "Gif",
             "is_constructor": 1,
             "params": [
@@ -50,16 +57,9 @@
             "plugin_for": [],
             "extension_for": [],
             "file": "src/gifken.ts",
-            "line": 505,
+            "line": 473,
             "description": "Frame",
-            "is_constructor": 1,
-            "params": [
-                {
-                    "name": "gif",
-                    "description": "",
-                    "type": "Gif"
-                }
-            ]
+            "is_constructor": 1
         },
         "Color": {
             "name": "Color",
@@ -70,7 +70,7 @@
             "plugin_for": [],
             "extension_for": [],
             "file": "src/gifken.ts",
-            "line": 536,
+            "line": 502,
             "description": "Color",
             "is_constructor": 1,
             "params": [
@@ -94,8 +94,48 @@
     },
     "classitems": [
         {
-            "file": "src/gifken.ts",
+            "file": "src/GifPresenter.ts",
             "line": 19,
+            "description": "Convert Gif to Blob.",
+            "static": 1,
+            "itemtype": "method",
+            "name": "writeToBlob",
+            "params": [
+                {
+                    "name": "bytes",
+                    "description": "",
+                    "type": "Uint8Array[]"
+                }
+            ],
+            "return": {
+                "description": "BLOB",
+                "type": "Blob"
+            },
+            "class": "Gif"
+        },
+        {
+            "file": "src/GifPresenter.ts",
+            "line": 31,
+            "description": "Convert Gif to Data-URL string.",
+            "static": 1,
+            "itemtype": "method",
+            "name": "writeToDataUrl",
+            "params": [
+                {
+                    "name": "bytes",
+                    "description": "",
+                    "type": "Uint8Array[]"
+                }
+            ],
+            "return": {
+                "description": "Data-URL string",
+                "type": "String"
+            },
+            "class": "Gif"
+        },
+        {
+            "file": "src/gifken.ts",
+            "line": 20,
             "description": "GIF Header block.",
             "access": "private",
             "tagname": "",
@@ -106,7 +146,7 @@
         },
         {
             "file": "src/gifken.ts",
-            "line": 28,
+            "line": 29,
             "description": "GIF image width.",
             "access": "private",
             "tagname": "",
@@ -117,7 +157,7 @@
         },
         {
             "file": "src/gifken.ts",
-            "line": 37,
+            "line": 38,
             "description": "GIF image height.",
             "access": "private",
             "tagname": "",
@@ -128,7 +168,7 @@
         },
         {
             "file": "src/gifken.ts",
-            "line": 46,
+            "line": 47,
             "description": "The number of color in the Global Color Table.",
             "access": "private",
             "tagname": "",
@@ -139,7 +179,7 @@
         },
         {
             "file": "src/gifken.ts",
-            "line": 59,
+            "line": 60,
             "description": "The Global Color Table array.",
             "access": "private",
             "tagname": "",
@@ -150,7 +190,7 @@
         },
         {
             "file": "src/gifken.ts",
-            "line": 70,
+            "line": 71,
             "description": "The number of animation iteration count.\nif this is 0, it is infinite.",
             "access": "private",
             "tagname": "",
@@ -161,7 +201,7 @@
         },
         {
             "file": "src/gifken.ts",
-            "line": 105,
+            "line": 108,
             "description": "Parse Gif image from ArrayBuffer.",
             "static": 1,
             "itemtype": "method",
@@ -181,13 +221,13 @@
         },
         {
             "file": "src/gifken.ts",
-            "line": 190,
+            "line": 197,
             "description": "Convert Gif to Uint8Array[].",
             "access": "private",
             "tagname": "",
             "static": 1,
             "itemtype": "method",
-            "name": "_writeToArrayBuffer",
+            "name": "writeToArrayBuffer",
             "params": [
                 {
                     "name": "gif",
@@ -203,77 +243,19 @@
         },
         {
             "file": "src/gifken.ts",
-            "line": 328,
-            "description": "Return Blob object.",
-            "itemtype": "method",
-            "name": "writeToBlob",
-            "return": {
-                "description": "BLOB",
-                "type": "Blob"
-            },
-            "class": "Gif"
-        },
-        {
-            "file": "src/gifken.ts",
-            "line": 338,
-            "description": "Convert Gif to Blob.",
-            "static": 1,
-            "itemtype": "method",
-            "name": "writeToBlob",
-            "params": [
-                {
-                    "name": "gif",
-                    "description": "",
-                    "type": "Gif"
-                }
-            ],
-            "return": {
-                "description": "BLOB",
-                "type": "Blob"
-            },
+            "line": 335,
+            "description": "TODO",
             "class": "Gif"
         },
         {
             "file": "src/gifken.ts",
             "line": 350,
-            "description": "Return Data-URL string.",
-            "itemtype": "method",
-            "name": "writeToDataUrl",
-            "return": {
-                "description": "Data-URL string",
-                "type": "String"
-            },
-            "class": "Gif"
-        },
-        {
-            "file": "src/gifken.ts",
-            "line": 360,
-            "description": "Convert Gif to Data-URL string.",
-            "static": 1,
-            "itemtype": "method",
-            "name": "writeToDataUrl",
-            "params": [
-                {
-                    "name": "gif",
-                    "description": "",
-                    "type": "Gif"
-                }
-            ],
-            "return": {
-                "description": "Data-URL string",
-                "type": "String"
-            },
-            "class": "Gif"
-        },
-        {
-            "file": "src/gifken.ts",
-            "line": 382,
             "description": "Split the animated GIF image.",
             "itemtype": "method",
             "name": "split",
             "params": [
                 {
-                    "name": "orverwrite",
+                    "name": "overwrite",
                     "description": "",
                     "type": "Boolean"
                 }
@@ -286,13 +268,13 @@
         },
         {
             "file": "src/gifken.ts",
-            "line": 443,
+            "line": 411,
             "description": "Playback the animated GIF image.",
             "itemtype": "method",
             "name": "playback",
             "params": [
                 {
-                    "name": "orverwrite",
+                    "name": "overwrite",
                     "description": "",
                     "type": "Boolean"
                 }
@@ -304,5 +286,10 @@
             "class": "Gif"
         }
     ],
-    "warnings": []
+    "warnings": [
+        {
+            "message": "Missing item type\nTODO",
+            "line": " src/gifken.ts:335"
+        }
+    ]
 }
