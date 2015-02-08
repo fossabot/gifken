@@ -12,7 +12,7 @@ window.onload = function () {
     xhr.responseType = "arraybuffer";
     xhr.onload = function (e) {
         var arrayBuffer = e.target["response"];
-        if (typeof Worker === "undefined") {
+        if (typeof Worker === "undefined" || typeof URL === "undefined") {
             var gif = gifken.Gif.parse(arrayBuffer);
             while (content.firstChild) {
                 element.removeChild(element.firstChild);

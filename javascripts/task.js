@@ -11,6 +11,6 @@
             var blob = gifken.GifPresenter.writeToBlob(i.writeToArrayBuffer());
             message["srcs"].push(URL.createObjectURL(blob));
         });
-        this.postMessage(message);V
+        postMessage(message);
     };
 })();
