@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>src/GifPresenter.ts - gifken</title>
+    <title>GifColor - gifken</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -17,7 +17,7 @@
                 <h1><img src="../assets/css/logo.png" title="gifken" width="117" height="52"></h1>
         </div>
         <div class="yui3-u-1-4 version">
-            <em>API Docs for: 0.0.2-alpha</em>
+            <em>API Docs for: 0.1.0</em>
         </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -38,10 +38,11 @@
                 
                         <div id="api-tabview-panel">
                             <ul id="api-classes" class="apis classes">
-                                <li><a href="../classes/Color.html">Color</a></li>
-                                <li><a href="../classes/Frame.html">Frame</a></li>
                                 <li><a href="../classes/Gif.html">Gif</a></li>
+                                <li><a href="../classes/GifColor.html">GifColor</a></li>
+                                <li><a href="../classes/GifFrame.html">GifFrame</a></li>
                             </ul>
+                
                 
                             <ul id="api-modules" class="apis modules">
                             </ul>
@@ -77,63 +78,124 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-<h1 class="file-heading">File: src/GifPresenter.ts</h1>
+<h1>GifColor Class</h1>
+<div class="box meta">
 
-<div class="file">
-    <pre class="code prettyprint linenums">
-/*!
- gifken v0.0.2-alpha
- Copyright (c) 2015 aaharu
- This software is released under the MIT License.
- https://raw.github.com/aaharu/gifken/master/LICENSE
 
- This product includes following software:
- * jsgif
- - Copyright (c) 2011 Shachaf Ben-Kiki
- - https://github.com/shachaf/jsgif
- - https://raw.github.com/shachaf/jsgif/master/LICENSE
- * GifWriter.js
- - Copyright (c) 2013 NOBUOKA Yu
- - https://github.com/nobuoka/GifWriter.js
- - https://raw.github.com/nobuoka/GifWriter.js/master/LICENSE.txt
- */
+        <div class="foundat">
+            Defined in: <a href="../files/src_gifken.ts.html#l502"><code>src&#x2F;gifken.ts:502</code></a>
+        </div>
 
-class GifPresenter {
-    /**
-     * Convert Gif to Blob.
-     *
-     * @static
-     * @method writeToBlob
-     * @param {Uint8Array[]} bytes
-     * @return {Blob} BLOB
-     **/
-    static writeToBlob(bytes:Uint8Array[]):Blob {
-        return new Blob(bytes, { &quot;type&quot;: &quot;image/gif&quot; });
-    }
 
-    /**
-     * Convert Gif to Data-URL string.
-     *
-     * @static
-     * @method writeToDataUrl
-     * @param {Uint8Array[]} bytes
-     * @return {string} Data-URL string
-     **/
-    static writeToDataUrl(bytes:Uint8Array[]):string {
-        var str = &quot;&quot;;
-        bytes.forEach((buffer) =&gt; {
-            var codes:number[] = [];
-            for (var i = 0, l = buffer.byteLength; i &lt; l; ++i) {
-                codes.push(buffer[i]);
-            }
-            str += String.fromCharCode.apply(null, codes);
-        });
-        return &quot;data:image/gif;base64,&quot; + btoa(str);
-    }
-}
-export = GifPresenter;
+</div>
 
-    </pre>
+
+<div class="box intro">
+    <p>GifColor</p>
+
+</div>
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+<div id="method_GifColor" class="method item">
+    <h3 class="name"><code>GifColor</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>r</code>
+                </li>
+                <li class="arg">
+                        <code>g</code>
+                </li>
+                <li class="arg">
+                        <code>b</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_gifken.ts.html#l502"><code>src&#x2F;gifken.ts:502</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">r</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">g</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">b</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+    </div>
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+
+
+
+        </div>
+
+
+
+
+    </div>
 </div>
                     </div>
                 </div>

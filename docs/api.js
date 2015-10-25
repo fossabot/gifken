@@ -1,11 +1,12 @@
 YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
-        "Color",
-        "Frame",
-        "Gif"
+        "Gif",
+        "GifColor",
+        "GifFrame"
     ],
     "modules": [],
-    "allModules": []
+    "allModules": [],
+    "elements": []
 } };
 });

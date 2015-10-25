@@ -3,6 +3,10 @@ Thumbs.db
 Desktop.ini
 .idea/
 *.iml
+*.swp
+*~
+\#*\#
+.vscode/
 
 node_modules/
 
@@ -12,3 +16,5 @@ tscommand.tmp.txt
 
 sample/
 src/
+build/
+test/
