@@ -1,4 +1,3 @@
-var window = self;
 self.onmessage = function (evt) {
     var message = {};
     importScripts("/gifken/javascripts/gifken-client.min.js");
